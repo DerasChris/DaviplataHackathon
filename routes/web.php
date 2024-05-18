@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PagosController;
 use App\Http\Controllers\DaviuniAuthController;
+use App\Http\Controllers\MensualidadesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,14 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/daviuni', [PagosController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('daviuni');
+Route::get('/aranceles', function () {
+    return view('aranceles');
+});
+
+Route::get('/mensualidad', [MensualidadesController::class, 'showMensualidad'])->name('mens');
+
+
+
 
     Route::get('/custom-login', [DaviuniAuthController::class, 'showLoginForm'])->name('custom.login');
     Route::post('/custom-login', [DaviuniAuthController::class, 'login'])->name('custom.login');

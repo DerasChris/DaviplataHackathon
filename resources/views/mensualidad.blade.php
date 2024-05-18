@@ -16,18 +16,17 @@
     @include('layouts.header')
 
     <section>
-    <span class="textCuenta">{{ session('nombre')}}</span>
-                <br>
-                <span class="textCuenta">Mi cuenta es: {{ session('numeroDeCuenta') }}</span>
         <main>
-            <div class="circle">
-                <SPAN>MI SALDO</SPAN>
-                <span>US $ {{ session('saldoDisponible')}}</span>
-            </div>
-            <SPAN class="m-5">Depósitos garantizados por IGD de conformidad a lo regulado por la ley de bancos.</SPAN>
-            <span>Recuerde: monto máximo por transacción $1095.00 y acumulado en depósitos al mes $2190.00</span>
+            <h2>PAGO DE MENSUALIDAD</h2>
+            <br>
+            <span>Mi saldo es: US: ${{ session('saldoDisponible')}}</span>
+            <br>
         </main>
     </section>
+    <div class="comt">
+    <input type="range" class="c-rng" min="0" max="360" step="1" value="75" data-range="circular" />
+    </div>
+    
     <script src="{{ asset('js/functions.js') }}"></script>
 </body>
 

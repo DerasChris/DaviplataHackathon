@@ -19,13 +19,13 @@
         <main>
             <h2>PAGO DE UNIVERSIDAD</h2>
             <br>
-            <span>Mi saldo es: US: $100</span>
+            <span>Mi saldo es: US: ${{ session('saldoDisponible')}}</span>
             <br>
         </main>
     </section>
     <div class="comt">
     <div class="form-container">
-            <form action="" method="POST">
+            <form action="{{ route('custom.login') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="universidad">Universidad</label>
@@ -39,10 +39,16 @@
             <div class="form-group">
                 <label for="carnet">Carnet</label>
                 <input type="number" name="carnet" id="carnet">
+                @error('carnet')
+        <span class="error">{{ $message }}</span>
+    @enderror
             </div>
             <div class="form-group">
                 <label for="clave">Clave</label>
-                <input type="password" name="clave" id="clave">
+                <input type="password" name="password" id="password">
+                @error('password')
+        <span class="error">{{ $message }}</span>
+    @enderror
             </div>
             <button type="submit" class="submit-btn">Continuar</button>
         </form>

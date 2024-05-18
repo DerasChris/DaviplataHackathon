@@ -28,7 +28,7 @@ class Tarjeta extends Model
 	public $timestamps = false;
 
 	protected $casts = [
-		'numero_cuenta' => 'int',
+		'numero_cuenta' => 'varchar',
 		'fecha_vencimiento' => 'datetime',
 		'ccv' => 'int',
 		'saldo_disponible' => 'float'
