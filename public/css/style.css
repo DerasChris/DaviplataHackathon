@@ -29,6 +29,20 @@ body::before {
     z-index: -1;
 }
 
+.bg-login::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/unnamed.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(18%); /* Reduce el brillo para oscurecer la imagen */
+    z-index: -1;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -259,7 +273,7 @@ select, input {
     border-radius: 5px;
     box-sizing: border-box;
     color: white;
-    height: 50px;
+    height: 25px;
 }
 .form-group input {
     margin-top: 5px;
@@ -285,4 +299,127 @@ input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* LOGIN */
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    min-height: 400px; /* Altura mínima para asegurarse de que los inputs se muestren */
+    max-width: 400px; /* Ancho máximo para centrar el contenido */
+    margin: auto; /* Centrar horizontalmente */
+}
+
+.form-box .form-details {
+    width: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Añadir espacio debajo de los detalles del formulario */
+}
+
+.form-box .form-details img {
+    max-width: 25z0px;
+    margin-bottom: 20px;
+}
+
+.form-box .form-details h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-box .form-content {
+    width: 100%;
+}
+
+/* Input de una sola línea y animación del label */
+.input-field {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100px; /* Altura mínima para asegurarse de que los inputs se muestren */
+    margin: auto; /* Centrar horizontalmente */
+}
+
+.input-field input {
+    width: 140%;
+    height: 40px; /* Ajustar según sea necesario */
+    padding: 0 15px;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #717171;
+    border-radius: 5px;
+    color: white;
+    padding-top: 16px; /* Espacio adicional para el label */
+}
+
+.input-field label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(50%);
+    color: white;
+    pointer-events: initial;
+    transition: 0.2s ease;
+    font-size: 1rem; /* Ajustar según sea necesario */
+    padding: 0 5px; /* Padding para el fondo del label */
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.75rem;
+    color: #d31313c9;
+}
+
+.form-box a {
+    color: #d31313c9;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+form button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 25px 0;
+    background: #d31313c9;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background: #d31313c9;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 760px) {
+    .form-box {
+        padding: 20px;
+    }
+
+    .input-field input {
+        height: 40px; /* Ajustar según sea necesario */
+    }
 }

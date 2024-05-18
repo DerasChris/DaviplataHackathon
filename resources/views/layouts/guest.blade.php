@@ -12,20 +12,23 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
-            <div>
+    <body class="bg-login min-h-screen">
+        <div class="form-box login">
+            <div class="form-details">
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    <img src="{{ asset('img/image.png')}}" alt="" srcset="">
                 </a>
+                <h1>¡BIENVENIDO!</h1>
             </div>
-
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+            <div class="form-content">
                 {{ $slot }}
             </div>
         </div>
+        <!-- <div class="w-full sm:max-w-md mt-6 px-6 py-4 shadow-md overflow-hidden sm:rounded-lg">
+                    </div> -->
     </body>
 </html>
