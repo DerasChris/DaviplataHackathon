@@ -423,3 +423,34 @@ form button:hover {
         height: 40px; /* Ajustar según sea necesario */
     }
 }
+
+/** DAVINEGOCIO*/
+.boton-group {
+    padding: 6px 0;
+    border-block: 1px solid #3f3f3f;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton-group:hover {
+    background-color: #272727;
+}
+
+.boton-accion{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 25px 0;
+    background: #171616eb;
+    transition: 0.2s ease;
+}
