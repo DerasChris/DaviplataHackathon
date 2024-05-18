@@ -10,9 +10,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class Usuariouniversidad extends Authenticatable implements CanResetPasswordContract
+class Usuariouniversidad extends Authenticatable 
 {
-    use Notifiable, CanResetPassword;
+
 
     protected $table = 'usuarios_universidad';
 

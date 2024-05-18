@@ -235,6 +235,33 @@ main h1 {
     align-items: center;
 }
 
+.btn {
+    width: 80%;
+    margin: 5px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #a7a3a39f;
+}
+
+ .active{
+    background-color: #e8e6e6c3;
+}
+
+.btn-c{
+    margin-top: 25px;
+    width: 60%;
+    margin: 5px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #d31313c9;
+    border: 0;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+
+
 
 .form-container {
     background-color: transparent;
@@ -286,3 +313,8 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+
+
+
+

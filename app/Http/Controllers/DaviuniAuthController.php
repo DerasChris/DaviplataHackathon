@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Models\CustomUser;
+use App\Models\Usuariouniversidad;
 
 class DaviuniAuthController extends Controller
 {
@@ -23,7 +23,7 @@ class DaviuniAuthController extends Controller
         $credentials = $request->only('carnet', 'password');
 
         if (Auth::guard('custom')->attempt(['carnet' => $credentials['carnet'], 'password' => $credentials['password']])) {
-            return redirect()->intended('/custom-dashboard');
+            return redirect()->intended('/aranceles');
         } else {
             return back()->withErrors(['carnet' => 'Las credenciales no coinciden con nuestros registros.']);
         }
