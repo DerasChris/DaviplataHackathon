@@ -3,7 +3,7 @@
         <div class="menu-btn">
             <i class="fa fa-bars fa-2x"></i>
         </div>
-        <a href="">
+        <a href="#">
             <span>DAVIPLATA</span><br>
             <span>Ultima Sesion: 00 may 0000</span>
         </a>
@@ -35,12 +35,12 @@
     </div>
     <div class="menu-group">
         <div class="menu-item">
-            <span >Promociones</span>
+            <span><a href="{{ route('custom.login') }}" class="btn btn-primary">Daviuni</a></span>
         </div>
     </div>
     <div class="menu-group">
         <div class="menu-item">
-            <span >Conoce mas aqui</span>
+            <span >Davi negocios</span>
         </div>
     </div>
     <div class="menu-group">

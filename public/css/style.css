@@ -8,11 +8,25 @@
 
 body {
     height: 100vh;
-    background-color: #0f0f0f;
+    background-color: #0c0c0c;
     color: white;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(18%); /* Reduce el brillo para oscurecer la imagen */
+    z-index: -1;
 }
 
 header {
@@ -91,6 +105,13 @@ header a {
     margin-bottom: 20px;
 }
 
+#menu .menu-header a {
+    background-color: #3f3f3f;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
 .menu-group {
     padding: 6px 0;
     border-block: 1px solid #3f3f3f;
@@ -105,6 +126,11 @@ header a {
     cursor: pointer;
 }
 
+.menu-item span a{
+    text-decoration: none;
+    color: white;
+}
+
 .menu-item:hover {
     background-color: #272727;
 }
@@ -112,9 +138,9 @@ header a {
 section {
     width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    flex: 1;
-    padding: 16px;
+    padding: 50px;
 }
 
 nav {
@@ -122,17 +148,21 @@ nav {
     height: 50px;
     align-items: center;
     padding: 8px;
-    background-color: #333;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 main {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+main > span {
+    margin-top: 55px;
 }
 
 main h1 {
@@ -167,4 +197,92 @@ main h1 {
     section {
         padding-top: 122px;
     }
+}
+
+.textCuenta {
+    margin-top: 5px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+
+.circle{
+    margin-top: 20px;
+    border: solid 3px white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle span {
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Formulario davi uni*/
+
+.comt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-container {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+select, input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    height: 50px;
+}
+.form-group input {
+    margin-top: 5px;
+}
+.form-group select {
+    margin-top: 5px;
+}
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d31313c9;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
