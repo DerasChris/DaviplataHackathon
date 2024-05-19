@@ -17,18 +17,17 @@
 
     <section>
         <main>
-            <h2>PAGO DE UNIVERSIDAD</h2>
+            <h2>Tu negocio</h2>
             <br>
             <span>Mi saldo es: US: ${{ session('saldoDisponible')}}</span>
             <br>
         </main>
     </section>
     <div class="comt">
-        <h4>Aranceles</h4>
-        <button class="btn active"><a href="{{ route('mens') }}" class="reset-a">Mensualidad</a></button>
-        <button class="btn">Seminarios</button>
-        <button class="btn">Tickets de Parqueo</button>
-        <button class="btn">Otros</button>
+        <h4>Productividad</h4>
+        <button class="btn active"><a href="{{ route('mens') }}" class="reset-a">Registro de ventas</a></button>
+        <button class="btn">Control de Ventas</button>
+        <button class="btn">Ganancias</button>
 
         <button class="btn-c" ><a href="{{ route('mens') }}" class="reset-a-white">Continuar</a></button>
 
