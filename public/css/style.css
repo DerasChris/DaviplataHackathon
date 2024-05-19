@@ -504,7 +504,7 @@ input[type=number]::-webkit-inner-spin-button {
     border: 1px solid #000000;
     padding: 8px;
     text-align: left;
-    padding: 20px;
+    padding: 4px;
 }
 
 .productos-tabla th {
@@ -516,7 +516,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 
-#overlay {
+#overlayy {
     display: none;
     position: fixed;
     top: 0;
@@ -539,7 +539,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 #precio-text {
     position: absolute;
-    bottom: 35%;
+    bottom: 85px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -548,7 +548,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 #cerrar-overlay {
     position: absolute;
-    bottom: 25%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
     color: white;

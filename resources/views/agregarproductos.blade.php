@@ -77,7 +77,7 @@
 
 
      <!-- Overlay para el código QR -->
-<div id="overlay" style="display: none;">
+<div id="overlayy" style="display: none;">
     <div id="qr-container"></div>
     <p id="precio-text"></p>
     <button id="cerrar-overlay">Cerrar</button>
@@ -86,7 +86,7 @@
     <script> // Obtener todos los botones de "Vender"
     document.addEventListener('DOMContentLoaded', function() {
     const venderBtns = document.querySelectorAll('.vender-btn');
-    const overlay = document.getElementById('overlay');
+    const overlay = document.getElementById('overlayy');
     const cerrarOverlayBtn = document.getElementById('cerrar-overlay');
 
     venderBtns.forEach(btn => {

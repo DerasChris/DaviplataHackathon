@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
+
 </head>
 
 <body class="container">
@@ -29,12 +31,39 @@
         <button class="btn">Seminarios</button>
         <button class="btn">Tickets de Parqueo</button>
         <button class="btn">Otros</button>
+        <button class="btn" id="show-notification-btn">Notificación</button>
 
         <button class="btn-c" ><a href="{{ route('mens') }}" class="reset-a-white">Continuar</a></button>
 
     </div>
     
     <script src="{{ asset('js/functions.js') }}"></script>
+
+   
+    <script>
+        document.getElementById('show-notification-btn').addEventListener('click', () => {
+            // Pedir permiso para mostrar notificaciones
+            Push.Permission.request(onGranted, onDenied);
+
+            function onGranted() {
+                // Mostrar la notificación
+                Push.create('Título de la Notificación', {
+                    body: 'Contenido de la Notificación',
+                    icon: '/path/to/icon.png', // Ruta a un ícono
+                    timeout: 4000, // Duración de la notificación
+                    onClick: function () {
+                        window.focus();
+                        this.close();
+                    }
+                });
+            }
+
+            function onDenied() {
+                console.log('Permiso de notificación denegado');
+            }
+        });
+    </script>
+ 
 </body>
 
 </html>
