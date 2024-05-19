@@ -38,13 +38,13 @@ class PagosUniversidad extends Model
 	];
 
 	protected $fillable = [
-		'numero_cuenta',
-		'carnet_usuario_universidad',
-		'monto',
-		'fecha_pago',
-		'fecha_vencimiento',
-		'estado_pago',
-		'id_tipo_pago',
-		'veces_pagado'
-	];
+        'numero_cuenta',
+        'carnet_usuario_universidad',
+        'monto',
+        'fecha_pago',
+        'fecha_vencimiento',
+        'estado_pago',
+        'id_tipo_pago',
+        'veces_pagado'
+    ];
 }

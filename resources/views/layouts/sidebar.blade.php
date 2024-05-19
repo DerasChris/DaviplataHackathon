@@ -5,7 +5,7 @@
         </div>
         <a href="#">
             <span>DAVIPLATA</span><br>
-            <span>Ultima Sesion: 00 may 0000</span>
+            <span>Ultima Sesion: {{ date('Y-m-d H:i:s') }}</span>
         </a>
     </div>
     <div class="menu-group">
@@ -35,12 +35,14 @@
     </div>
     <div class="menu-group">
         <div class="menu-item">
-            <span><a href="{{ route('custom.login') }}" class="btn btn-primary">Daviuni</a></span>
+            <span><a href="{{ route('custom.login') }}" class="menufx">Pago unversidad</a></span>
+            <div class="new-functionality-badge">Nueva</div>
         </div>
     </div>
     <div class="menu-group">
         <div class="menu-item">
-            <span >Davi negocios</span>
+        <span><a href="{{ route('davinegocios') }}" class="menufx">Davi negocios</a></span>
+            <div class="new-functionality-badge">Nueva</div>
         </div>
     </div>
     <div class="menu-group">

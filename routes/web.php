@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PagosController;
 use App\Http\Controllers\DaviuniAuthController;
 use App\Http\Controllers\MensualidadesController;
+use App\Http\Controllers\DavinegociosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,17 @@ Route::get('/aranceles', function () {
     return view('aranceles');
 });
 
+Route::get('/mensualidades', function () {
+    return view('aranceles');
+});
+
+
+
+Route::post('/procesar-pago', [PagoUniversidadController::class, 'procesarPago'])->name('pagos');
+
 Route::get('/mensualidad', [MensualidadesController::class, 'showMensualidad'])->name('mens');
 
-
+Route::get('/davinegocio', [DavinegociosController::class, 'index'])->name('davinegocios');
 
 
     Route::get('/custom-login', [DaviuniAuthController::class, 'showLoginForm'])->name('custom.login');

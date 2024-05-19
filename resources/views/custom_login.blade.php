@@ -31,9 +31,10 @@
                 <label for="universidad">Universidad</label>
                 <select name="universidad" id="universidad">
                     <option value="">Selecciona una universidad</option>
-                    <option value="universidad1">Universidad 1</option>
-                    <option value="universidad2">Universidad 2</option>
+                    <option value="universidad1">Universidad Tecnológica de El Salvador</option>
+                    <option value="universidad2">Unniversidad José Matías Delgado</option>
                     <option value="universidad3">Universidad 3</option>
+                    <option value="universidad4">Universidad 4</option>
                 </select>
             </div>
             <div class="form-group">

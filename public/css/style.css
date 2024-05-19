@@ -105,11 +105,18 @@ header a {
     margin-bottom: 20px;
 }
 
+.menufx {
+    text-decoration: none;
+    color: white;
+}
+
 #menu .menu-header a {
     background-color: #3f3f3f;
     text-decoration: none;
     color: white;
     padding: 10px;
+    font-size: 10px;
+    border-radius: 8px;
 }
 
 .menu-group {
@@ -318,3 +325,115 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 
+.reset-a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+.reset-a-white {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    width: 100%;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    position: relative; /* Añadir posición relativa */
+    margin: 5px;
+}
+
+.checkbox-button label {
+    margin-right: 10px; /* Añadir margen derecho para separar el texto del checkbox */
+}
+
+.checkbox-button input[type="checkbox"] {
+    margin-left: auto; /* Alinear el checkbox a la derecha */
+}
+
+#total {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.custom-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-color: #f0f0f0; /* Color de fondo */
+    color: #333; /* Color del texto */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px; /* Espacio alrededor del texto */
+    width: 60px; /* Ancho del input */
+    font-size: 14px; /* Tamaño del texto */
+    outline: none; /* Eliminar el borde de enfoque */
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: none; /* Ocultar inicialmente */
+  }
+  
+  #dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #dialog button {
+    margin: 10px;
+  }
+  
+  main h2 {
+    text-align: center;
+  }
+
+  .new-functionality-badge {
+    background-color: #d31313c9; /* Color de fondo del recuadro */
+    color: #fff; /* Color del texto */
+    font-size: 12px; /* Tamaño del texto */
+    padding: 2px 5px; /* Espaciado interno */
+    border-radius: 3px; /* Borde redondeado */
+    margin-left: 5px; /* Margen izquierdo para separar del enlace */
+}
