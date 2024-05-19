@@ -7,6 +7,7 @@ use App\Http\Controllers\PagosController;
 use App\Http\Controllers\DaviuniAuthController;
 use App\Http\Controllers\MensualidadesController;
 use App\Http\Controllers\DavinegociosController;
+use App\Http\Controllers\AgregarProductosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,9 @@ Route::get('/mensualidades', function () {
 Route::post('/procesar-pago', [PagoUniversidadController::class, 'procesarPago'])->name('pagos');
 
 Route::get('/mensualidad', [MensualidadesController::class, 'showMensualidad'])->name('mens');
+
+Route::get('/agregarProductos', [AgregarProductosController::class, 'index'])->name('addprod');
+Route::post('/agregarProductos', [AgregarProductosController::class, 'store'])->name('addprod');
 
 Route::get('/davinegocio', [DavinegociosController::class, 'index'])->name('davinegocios');
 

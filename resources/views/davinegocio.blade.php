@@ -25,7 +25,8 @@
     </section>
     <div class="comt">
         <h4>Productividad</h4>
-        <button class="btn active"><a href="{{ route('mens') }}" class="reset-a">Registro de ventas</a></button>
+        <button class="btn "><a href="{{ route('addprod') }}" class="reset-a">Agregar Productos</a></button>
+        <button class="btn "><a href="{{ route('mens') }}" class="reset-a">Registro de ventas</a></button>
         <button class="btn">Control de Ventas</button>
         <button class="btn">Ganancias</button>
 
